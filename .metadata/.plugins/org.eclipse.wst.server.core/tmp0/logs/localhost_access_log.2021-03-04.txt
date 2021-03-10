@@ -1,0 +1,6 @@
+127.0.0.1 - - [04/Mar/2021:13:52:18 +0900] "GET / HTTP/1.1" 404 804
+0:0:0:0:0:0:0:1 - - [04/Mar/2021:13:52:18 +0900] "GET /servletTest/fileUploadServlet.do HTTP/1.1" 500 3096
+0:0:0:0:0:0:0:1 - - [04/Mar/2021:13:52:18 +0900] "GET /favicon.ico HTTP/1.1" 404 815
+0:0:0:0:0:0:0:1 - - [04/Mar/2021:13:52:27 +0900] "GET /servletTest/basic/fileUpload/allFiles.jsp HTTP/1.1" 200 435
+0:0:0:0:0:0:0:1 - - [04/Mar/2021:13:52:28 +0900] "GET /servletTest/basic/fileUpload/fileUpload.jsp HTTP/1.1" 200 762
+127.0.0.1 - - [04/Mar/2021:13:59:42 +0900] "GET / HTTP/1.1" 404 804

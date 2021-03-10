@@ -1,0 +1,6 @@
+127.0.0.1 - - [26/Feb/2021:21:01:03 +0900] "GET / HTTP/1.1" 404 804
+0:0:0:0:0:0:0:1 - - [26/Feb/2021:21:01:13 +0900] "GET /servletTest/member/memberList.ddit HTTP/1.1" 200 1251
+0:0:0:0:0:0:0:1 - - [26/Feb/2021:21:01:13 +0900] "GET /favicon.ico HTTP/1.1" 404 815
+0:0:0:0:0:0:0:1 - - [26/Feb/2021:21:01:18 +0900] "GET /servletTest2/member/memberList.ddit HTTP/1.1" 200 2043
+0:0:0:0:0:0:0:1 - - [26/Feb/2021:21:01:21 +0900] "GET /servletTest2/member/memberView.ddit?mem_id=a001 HTTP/1.1" 200 1578
+0:0:0:0:0:0:0:1 - - [26/Feb/2021:21:01:21 +0900] "GET /servletTest2/js/jquery-3.5.1.min.js HTTP/1.1" 200 89476

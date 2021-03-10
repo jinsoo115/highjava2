@@ -1,0 +1,2097 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>테이블 정의서(HTML)</title>
+<style type="text/css">
+<!--
+.entity{
+	width: 1024px;
+	margin-bottom: 50px;
+	page-break-before: always;
+}
+.entity-header tr td, .entity-header tr th{
+	text-align: left;
+	padding-left: 5px;
+	padding-right: 5px;
+	vertical-align: top;
+}
+.entity-header{
+	border-spacing: 0px;
+	border-top: solid 2px black;
+	margin:0px;
+}
+.column-list{
+	width: 100%;
+	border-spacing: 0px;
+	margin: 0px;
+	border-bottom: solid 2px black;
+}
+.column-list th{
+	border-bottom: solid 2px black;
+	border-top: solid 2px black;
+	text-align: left;
+}
+.column-list th, .column-list td{
+	padding-left: 5px;
+	padding-right: 5px;
+	vertical-align: top;
+}
+.under-line{
+	border-bottom: solid 1px gray;
+}
+.right-line{
+	border-right: solid 1px gray;
+}
+.left-line{
+	border-left: solid 1px gray;
+}
+th{
+	background-color: #eee;
+}
+-->
+</style>
+</head>
+<body>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">회원</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">2021-02-23</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">member</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">mem_id</td>
+						<td class="right-line">회원식별자</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">mem_pass</td>
+						<td class="right-line">비밀번호</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">joinDate</td>
+						<td class="right-line">가입일시</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">DATE</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">mem_ali</td>
+						<td class="right-line">별명</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">mem_name</td>
+						<td class="right-line">회원이름</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">mem_icon</td>
+						<td class="right-line">프로필사진</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">BLOB</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">7</td>
+						<td class="right-line">mem_grade</td>
+						<td class="right-line">회원등급</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">8</td>
+						<td class="right-line">mem_age</td>
+						<td class="right-line">나이</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">9</td>
+						<td class="right-line">mem_gen</td>
+						<td class="right-line">성별</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">CHAR(1)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">10</td>
+						<td class="right-line">mem_mile</td>
+						<td class="right-line">마일리지</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">11</td>
+						<td class="right-line">mem_dismember</td>
+						<td class="right-line">탈퇴여부</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">12</td>
+						<td class="right-line">mem_disDate</td>
+						<td class="right-line">탈퇴일시</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">DATE</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">13</td>
+						<td class="right-line">mem_rptcount</td>
+						<td class="right-line">총신고횟수</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">요리북마크</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">2021-02-23</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">likelist</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">mem_id</td>
+						<td class="right-line">회원식별자</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PFK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">dish_code</td>
+						<td class="right-line">요리코드</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PFK</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">댓글</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">2021-02-23</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">reply</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">reply_code</td>
+						<td class="right-line">댓글 코드</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">reply_content</td>
+						<td class="right-line">내용</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(500)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">reply_date</td>
+						<td class="right-line">작성일자</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">DATE</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">dish_code</td>
+						<td class="right-line">요리코드</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">mem_id</td>
+						<td class="right-line">회원식별자</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">레시피 후기</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">2021-02-23</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">review</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">review_code</td>
+						<td class="right-line">후기 코드</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">review_cont</td>
+						<td class="right-line">내용</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(500)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">review_date</td>
+						<td class="right-line">작성일자</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">DATE</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">review_file</td>
+						<td class="right-line">첨부파일</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(100)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">review_star</td>
+						<td class="right-line">별점</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">mem_id</td>
+						<td class="right-line">회원식별자</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">7</td>
+						<td class="right-line">dish_code</td>
+						<td class="right-line">요리코드</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">일반게시글</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">2021-02-23</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">post</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">post_code</td>
+						<td class="right-line">글번호</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">board_code</td>
+						<td class="right-line">게시판분류코드</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">mem_id</td>
+						<td class="right-line">회원식별자</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">post_date</td>
+						<td class="right-line">작성일자</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">DATE</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">post_attach</td>
+						<td class="right-line">첨부파일</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(100)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">post_cont</td>
+						<td class="right-line">내용</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(500)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">7</td>
+						<td class="right-line">post_title</td>
+						<td class="right-line">제목</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">8</td>
+						<td class="right-line">post_hit</td>
+						<td class="right-line">조회수</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">9</td>
+						<td class="right-line">post_rpt</td>
+						<td class="right-line">신고수</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">공지사항</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">2021-02-23</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">notice</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">not_code</td>
+						<td class="right-line">공지사항 번호</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">mem_id</td>
+						<td class="right-line">회원식별자</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">not_title</td>
+						<td class="right-line">제목</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">not_cont</td>
+						<td class="right-line">내용</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(500)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">not_date</td>
+						<td class="right-line">작성일자</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">DATE</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">FAQ</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">2021-02-23</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">FAQ</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">faq_code</td>
+						<td class="right-line">글번호</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">mem_id</td>
+						<td class="right-line">회원식별자</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">faq_title</td>
+						<td class="right-line">제목</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">faq_cont</td>
+						<td class="right-line">내용</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(500)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">faq_date</td>
+						<td class="right-line">작성일자</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">DATE</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">요리</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">2021-02-23</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">dish</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">dish_code</td>
+						<td class="right-line">요리코드</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">dish_name</td>
+						<td class="right-line">요리명</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(50)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">dish_hit</td>
+						<td class="right-line">조회수</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">dish_date</td>
+						<td class="right-line">작성일자</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">DATE</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">dish_del</td>
+						<td class="right-line">삭제여부</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">mth_code</td>
+						<td class="right-line">조리방식코드</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">7</td>
+						<td class="right-line">dish_rec</td>
+						<td class="right-line">추천수</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">8</td>
+						<td class="right-line">dish_rpt</td>
+						<td class="right-line">신고수</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">재료</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">2021-02-23</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">ingredient</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">ing_code</td>
+						<td class="right-line">재료코드</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">ing_name</td>
+						<td class="right-line">재료명</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(50)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">조리법</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">2021-02-23</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">recipe</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">dish_code</td>
+						<td class="right-line">요리코드</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PFK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">rcp_code</td>
+						<td class="right-line">순번</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">rcp_manual</td>
+						<td class="right-line">메뉴얼</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(50)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">rcp_att</td>
+						<td class="right-line">첨부파일</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(100)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">재료묶음</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">2021-02-23</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">ingBun</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">ingBun_code</td>
+						<td class="right-line">재료묶음코드</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">ing_code</td>
+						<td class="right-line">재료코드</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">dish_code</td>
+						<td class="right-line">요리코드</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">분류</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">2021-02-23</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">cuisine</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">cui_code</td>
+						<td class="right-line">나라코드</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">cui_name</td>
+						<td class="right-line">나라명</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">나라묶음</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">2021-02-23</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">cuiBdl</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">cat_code</td>
+						<td class="right-line">나라묶음코드</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">cui_code</td>
+						<td class="right-line">나라코드</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">dish_code</td>
+						<td class="right-line">요리코드</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">일반댓글</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">2021-02-23</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">ruinRpl</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">rpl_code</td>
+						<td class="right-line">댓글 코드</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">mem_id</td>
+						<td class="right-line">회원식별자</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">rpl_cont</td>
+						<td class="right-line">내용</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(400)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">rpl_date</td>
+						<td class="right-line">작성일자</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">DATE</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">rpl_rpt</td>
+						<td class="right-line">신고수</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">post_code</td>
+						<td class="right-line">글번호</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">기피재료</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">2021-02-23</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">recIng</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">mem_id</td>
+						<td class="right-line">회원식별자</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PFK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">ing_code</td>
+						<td class="right-line">재료코드</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PFK</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">선호재료</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">2021-02-23</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">likeIng</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">mem_id</td>
+						<td class="right-line">회원식별자</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PFK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">ing_code</td>
+						<td class="right-line">재료코드</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PFK</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">선호분류</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">2021-02-23</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">likeType</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">mem_id</td>
+						<td class="right-line">회원식별자</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PFK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">cui_code</td>
+						<td class="right-line">나라코드</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PFK</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">조리방식</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">2021-02-23</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">methods</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">mth_code</td>
+						<td class="right-line">조리방식코드</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">mth_name</td>
+						<td class="right-line">조리방식명</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">게시판구분</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">2021-02-23</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">board</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">board_code</td>
+						<td class="right-line">게시판분류코드</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">board_no</td>
+						<td class="right-line">게시판분류명</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR(20)</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">상품</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">2021-02-23</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">prod</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">prod_code</td>
+						<td class="right-line">상품코드</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">prod_name</td>
+						<td class="right-line">상품명</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">prod_price</td>
+						<td class="right-line">판매금액</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">lprod_code</td>
+						<td class="right-line">상품분류코드</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">결제</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">2021-02-23</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">pay</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">pay_code</td>
+						<td class="right-line">결제코드</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">pg</td>
+						<td class="right-line">결제구분</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">pay_method</td>
+						<td class="right-line">결제수단</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">amount</td>
+						<td class="right-line">결제금액</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">order_code</td>
+						<td class="right-line">주문번호</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">상품분류</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">2021-02-23</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">lprod</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">lprod_code</td>
+						<td class="right-line">상품분류코드</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">lprod_name</td>
+						<td class="right-line">상품분류명</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">주문</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">2021-02-23</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">order</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">order_code</td>
+						<td class="right-line">주문번호</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">prod_code</td>
+						<td class="right-line">상품코드</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">mem_id</td>
+						<td class="right-line">회원식별자</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">order_count</td>
+						<td class="right-line">수량</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">order_status</td>
+						<td class="right-line">주문여부</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">CHAR(1)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">order_date</td>
+						<td class="right-line">주문일자</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">DATE</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	<table class="entity" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>
+				<table width="100%" class="entity-header">
+					<tr>
+						<th class="under-line right-line" width="140px">엔티티 타입명</th>
+						<td class="under-line right-line">배송지목록</td>
+						<th class="under-line right-line" width="70px">작성일</th>
+						<td class="under-line">2021-02-23</td>
+					</tr>
+					<tr>
+						<th class="under-line right-line">테이블명</th>
+						<td class="under-line right-line">addr</td>
+						<th class="under-line right-line">작성자</th>
+						<td class="under-line">홍길동</td>
+					</tr>
+					<tr>
+						<th class="right-line">테이블 설명</th>
+						<td colspan="3"></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<table class="column-list">
+					<tr>
+						<th class="right-line" width="40px">번호</th>
+						<th class="right-line">컬럼명</th>
+						<th class="right-line">속성명</th>
+						<th class="right-line">도메인</th>
+						<th class="right-line">데이터타입</th>
+						<th class="right-line">NULL여부</th>
+						<th class="right-line">기본값</th>
+						<th>KEY</th>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">1</td>
+						<td class="right-line">addr_code</td>
+						<td class="right-line">배송지목록코드</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">NUMBER</td>
+						<td class="right-line">Not Null</td>
+						<td class="right-line"></td>
+						<td>PK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">2</td>
+						<td class="right-line">mem_id</td>
+						<td class="right-line">회원식별자</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(30)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td>FK</td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">3</td>
+						<td class="right-line">addr_name1</td>
+						<td class="right-line">도로명</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(100)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">4</td>
+						<td class="right-line">addr_name2</td>
+						<td class="right-line">상세주소</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(50)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">5</td>
+						<td class="right-line">addr_rec</td>
+						<td class="right-line">수령인</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(20)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">6</td>
+						<td class="right-line">addr_post</td>
+						<td class="right-line">우편번호</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(5)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td class="right-line" style="text-align:right;">7</td>
+						<td class="right-line">addr_memo</td>
+						<td class="right-line">전달사항</td>
+						<td class="right-line">N/A</td>
+						<td class="right-line">VARCHAR2(100)</td>
+						<td class="right-line"></td>
+						<td class="right-line"></td>
+						<td></td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>
